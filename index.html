@@ -85,6 +85,18 @@
         #resume {
             background-color: #A7D948;
         }
+        #projects {
+            background-color: #F4A100;
+        }
+        #certifications {
+            background-color: #6EC6E9;
+        }
+        #contact {
+            background-color: #D3D3D3;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
         iframe {
             width: 80%;
             height: 90%;
@@ -99,6 +111,31 @@
             border: none;
             cursor: pointer;
             font-weight: bold;
+        }
+        .project-buttons, .certifications-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .project-button, .certification-button {
+            width: 260px;
+            height: 100px;
+            border-radius: 30px;
+            background-color: white;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+            border: none;
+        }
+        .project-button:hover, .certification-button:hover {
+            transform: scale(1.1);
         }
     </style>
     <script>
@@ -127,7 +164,7 @@
             <div class="buttons">
                 <button class="button" onclick="showSection('resume')">Resume</button>
                 <button class="button" onclick="showSection('projects')">Projects</button>
-                <button class="button" onclick="showSection('coursework')">Coursework</button>
+                <button class="button" onclick="showSection('certifications')">Certifications</button>
                 <button class="button" onclick="showSection('contact')">Contact</button>
             </div>
         </div>
@@ -138,19 +175,34 @@
         <iframe src="My resume.pdf"></iframe>
     </div>
     <div id="projects" class="section">
-        <h2>Projects</h2>
-        <p>Details about projects go here.</p>
         <button class="back-button" onclick="showMainMenu()">Back</button>
+        <div class="project-buttons">
+            <a href="https://github.com/HarshilSingh123/Vehicle-Rental-System" class="project-button">
+                Vehicle Rental System
+            </a>
+            <a href="https://github.com/HarshilSingh123/Flight-Reservation-System" class="project-button">
+                Flight Reservation System
+            </a>
+            <a href="https://github.com/HarshilSingh123/Portfolio" class="project-button">
+                Portfolio Website
+            </a>
+           
+        </div>
     </div>
-    <div id="coursework" class="section">
-        <h2>Coursework</h2>
-        <p>Details about coursework go here.</p>
+    <div id="certifications" class="section">
         <button class="back-button" onclick="showMainMenu()">Back</button>
+        <div class="certifications-buttons">
+            <a href="https://drive.google.com/file/d/1TmnTzOCHB4UIMK01t7sPSpMEmTkzRaIA/view?usp=sharing" class="certification-button">Duke University Certification</a>
+            <a href="https://drive.google.com/file/d/1DUmDXq2yOMrxSmFRYe-bV4N_RDF26GeA/view?usp=sharing" class="certification-button">AWS Certification</a>
+            <a href="https://drive.google.com/file/d/1uOON3esSdA26nV4WewKFHCTlhuiH_kSn/view?usp=sharing" class="certification-button">CISCO Certification</a>
+        </div>
     </div>
     <div id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Contact details go here.</p>
         <button class="back-button" onclick="showMainMenu()">Back</button>
+        <p>Phone Number: +91 9284348878</p>
+        <p>Email ID: rashmi.harshil21@gmail.com</p>
+        <p>LinkedIn: <a href="#">https://www.linkedin.com/in/harshil-singh-17b387250/</a></p>
+        <p>GitHub Profile: <a href="#">https://github.com/HarshilSingh123</a></p>
     </div>
 </body>
 </html>
